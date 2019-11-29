@@ -1,0 +1,29 @@
+@import "config";
+
+.cards {
+  max-width: $max-width;
+  margin: 0 auto;
+
+  @media (max-width: $max-width - 1) {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  &__row {
+    @include row;
+    flex-wrap: wrap;
+    margin-bottom: $gutter * 2;
+  }
+
+  &__col {
+    @include columns(12);
+    margin-bottom: $gutter * 2;
+    @media (min-width: 800px) {
+      @include columns(4);
+    }
+  }
+
+  &__error {
+    @include columns(12);
+  }
+}

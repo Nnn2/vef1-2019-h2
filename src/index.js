@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const isLecturePage = page.classList.contains('lecture-page');
 
   if (isLecturePage) {
-
+    const lecture = new Lecture();
+    lecture.load();  
   } else {
     const list = new List();
     list.load();

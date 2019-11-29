@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: $gutter * 2;
+  min-height: 50vh;
+  background-color: #999;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/header.jpg");
+
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background-color: rgba(197, 48, 48, 0.5);
+  }
+
+  &__class {
+    display: block;
+    position: relative;
+    font-size: 1rem;
+    font-family: $font-heading;
+    text-transform: uppercase;
+    z-index: 1;
+  }
+
+  &__title {
+    position: relative;
+    font-size: 3rem;
+    font-family: $font-heading;
+    z-index: 1;
+    
+  }
+}

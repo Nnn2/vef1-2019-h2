@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "eslint": "eslint ./src/**/*.js",
+    "rollup": "rollup -c",
+    "rollup-watch": "rollup -c -w",
     "browser-sync": "browser-sync start --server --files index.html fyrirlestur.html ./dist/styles.css ./dist/bundle.js",
     "stylelint": "stylelint ./src/styles/**/*.scss --syntax scss",
     "sass": "node-sass --source-map-embed ./src/styles/styles.scss ./dist/styles.css",
@@ -16,12 +18,17 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
     "browser-sync": "^2.26.7",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.2",
     "node-sass": "^4.13.0",
     "npm-run-all": "^4.1.5",
+    "rollup": "^1.27.5",
+    "rollup-plugin-babel": "^4.3.3",
     "stylelint": "^9.10.1",
     "stylelint-config-primer": "^2.2.11"
   }

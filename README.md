@@ -1,3 +1,9 @@
+
+This project was done by Imesha Chaturanga Chareyre and Naouele N. N. F. Mathieu. 
+The styles.css file is created inside the dist folder from the styles.scss file in styles folder that is insde the src folder. The styles.scss file imports the files confing.scss (that takes care of general seetings such as implementing rows, columns or setting the fonts), header.scss (that takes care of styling the heading and filter buttons. For a reason we don't understand, the background picture does not appear corectly), lecture.scss (that takes care of styling the page displaying a lecture), and list.scss (which takes care of styling the list of lectures on the main page). The javascript files are locaded in the lib folder which is located in src, except for the index.js file which is located in the src folder. 
+The index.js file imports the list.js and lecture.js files, which respectively take care of creating the list of lectures on the main page and of creating the lecture page. Each of these pages import functions from the saved.js file that handles the lectures saved in the local storage from the lectures.json file. The lecture file imports functions from the lectureItem.js that return different type of items in the lecture page such as quotes or images. All of these files except index.js and saved.js import functions from helpers.js, which help create elements. The index.js file should be be compiled into the dist folder by the rollup script, but this doesn't happen for a reason we haven't understood.
+ To run the project, node.js must be downloaded, and all the modules mentioned in package.json must also be downloaded (through the command prompt by being located in the project folder and typing "npm install" and "npm run dev").
+
 # Hópverkefni 2
 
 Verkefnið felst í því að smíða prótótýpu af fyrirlestravef fyrir vefforritun. Gefin eru gögn sem unnin eru uppúr námsefni vetrarins.

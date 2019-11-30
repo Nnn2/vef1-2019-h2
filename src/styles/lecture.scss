@@ -1,1 +1,114 @@
 @import "config";
+
+.lecture {
+  &__content {
+    max-width: $max-width;
+    margin: 0 auto;
+    @media (max-width: $max-width) {
+      padding-right: $gutter;
+      padding-left: $gutter;
+    }
+  }
+
+  &__row {
+    @include row;
+    flex-wrap: wrap;
+    margin-bottom: $gutter * 2;
+  }
+
+  &__col {
+    @include columns(12);
+    margin-bottom: $gutter * 2;
+    @media (min-width: 800px) {
+      @include columns(8);
+      @include offset-left(2);
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $font-heading;
+    color: #000;
+    margin-bottom: $gutter * 3;
+    text-decoration: none;
+  }
+
+  &__finish {
+    display: inline-block;
+    font-family: $font-heading;
+    font-size: 1rem;
+    background: inherit;
+    margin-bottom: $gutter * 2;
+    border: 0;
+    &--finished {
+      color: #1a1;
+    }
+  }
+
+  &__goBack {
+    font-family: $font-heading;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .item {
+    margin-bottom: $gutter * 2;
+  
+    &__heading {
+      font-family: $font-heading;
+      font-size: 2rem;
+      margin-bottom: -$gutter;
+    }
+  
+    &__text {
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: $gutter;
+    }
+  
+    &--blockquote {
+      background-color: #ccc;
+      padding: $gutter;
+      margin-right: -$gutter;
+      margin-left: -$gutter;
+    }
+  
+    &__quote {
+      margin-bottom: $gutter;
+    }
+  
+    &__attribute {
+      font-style: italic;
+    }
+  
+    &__caption {
+      font-style: italic;
+    }
+  
+    &__li {
+      margin-bottom: $gutter;
+    }
+  
+    &--youtube &__content {
+      position: relative;
+      max-width: 100%;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+    }
+  
+    &--youtube &__frame {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  
+    &__code {
+      font-family: $font-heading;
+    }
+  
+  }
+}

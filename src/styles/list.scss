@@ -1,0 +1,74 @@
+@import "config";
+
+.list {
+  max-width: $max-width;
+  margin: 0 auto;
+
+  @media (max-width: $max-width) {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  &__row {
+    @include row;
+    flex-wrap: wrap;
+    margin-bottom: $gutter * 2;
+  }
+
+  &__col {
+    @include columns(12);
+    margin-bottom: $gutter * 2;
+    @media (min-width: 800px) {
+      @include columns(4);
+    }
+  }
+
+  &__error {
+    @include columns(12);
+  }
+}
+
+.list__lecture {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: inherit;
+  background-color: #ccc;
+  height: 100%;
+  text-decoration: none;
+  transition: background-color 300ms ease-in-out;
+
+  &__title {
+    position: relative;
+    font-family: $font-heading;
+    font-size: 2rem;
+    z-index: 1;
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__texts {
+    flex: 1;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    padding: $gutter / 2;
+  }
+
+  &__finished {
+    color: #2d2;
+    font-size: 3rem;
+  }
+
+  &:hover {
+    background-color: #aaa;
+  }
+}

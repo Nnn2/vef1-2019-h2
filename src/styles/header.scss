@@ -1,3 +1,5 @@
+@import "config";
+
 .header {
   display: flex;
   flex-direction: column;
@@ -9,8 +11,10 @@
   background-color: #999;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../img/header.jpg");
 
+  &--main {
+    background-image: url("../img/header.jpg");
+  }
 
   &::before {
     position: absolute;
@@ -19,7 +23,7 @@
     bottom: 0;
     left: 0;
     content: "";
-    background-color: rgba(197, 48, 48, 0.5);
+    background-color: #ccc;
   }
 
   &__class {
@@ -37,5 +41,37 @@
     font-family: $font-heading;
     z-index: 1;
     
+  }
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: $gutter * 2;
+  list-style: none;
+
+  &__filter {
+      font-size: 1.5rem;
+      font-family: $font-heading;
+      font-weight: bold;
+      background-color: #ccc;
+      padding: $gutter / 2 $gutter;
+      margin-right: $gutter;
+      margin-left: $gutter;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: background-color 300ms ease-in-out;
+
+      &:hover {
+          background-color: #999;
+      }
+
+      &--active {
+          background-color: #2d2;
+
+          &:hover {
+          background-color: #1a1;
+          }
+      }
   }
 }
